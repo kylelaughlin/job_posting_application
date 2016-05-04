@@ -14,6 +14,7 @@ class PostingsController < ApplicationController
   end
 
   def index
+    @postings = Posting.all.order(created_at: :desc)
   end
 
   def show
