@@ -1,26 +1,3 @@
 <h1>New Job Posting</h1>
-<%= form_for @posting do |f| %>
-  <div>
-    <%= f.label :company %>
-    <%= f.text_field :company %>
-  </div>
-  <div>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
-  <div>
-    <%= f.label :description %>
-    <%= f.text_area :description, :rows => 5 %>
-  </div>
-  <div>
-    <%= f.label :salary %>
-    <%= f.number_field :salary %>
-  </div>
-  <div>
-    <%= f.label :location %>
-    <%= f.text_field :location %>
-  </div>
-  <div>
-    <%= f.submit %>
-  </div>
-<% end %>
+
+<%= render "layouts/form" %>
