@@ -1,2 +1,10 @@
-<h1>Postings#show</h1>
-<p>Find me in app/views/postings/show.html.erb</p>
+<h1><%= @posting.title%></h1>
+<div>
+  <p>Company: <%= @posting.company %></p>
+  <p>Salary: <%= @posting.salary %></p>
+  <p>Location: <%= @posting.location %></p>
+  <p>Description: <%= @posting.description %></p>
+</div>
+<div>
+  <%= link_to "Back to Index", :postings %>
+</div>
