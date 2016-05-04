@@ -22,6 +22,25 @@ class PostingsController < ApplicationController
   end
 
   def edit
+    @posting = Posting.find(params[:id])
+  end
+
+  def update
+    @posting = Posting.find(params[:id])
+    if @posting.update_attributes(posting_params)
+      redirect_to :postings, notice: "Update successful!"
+    else
+      flash.now[:alert] = "Unable to edit."
+      render :edit
+    end
+  end
+
+  def destroy
+    @posting = Posting.find(params[:id])
+    @posting.destroy
+    flash.now[:alert] = "Posting Destroyed!"
+    @postings = Posting.all.order(created_at: :desc)
+    render :index
   end
 
   private

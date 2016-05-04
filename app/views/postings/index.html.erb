@@ -2,7 +2,7 @@
 
 <% @postings.each do |posting| %>
   <div>
-    <p><%=posting.title%></p>
+    <p><%= link_to posting.title, posting_path(posting.id)%></p>
     <p><%=posting.company%></p>
     <p><%=posting.location%></p>
   </div>

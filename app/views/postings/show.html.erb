@@ -6,5 +6,7 @@
   <p>Description: <%= @posting.description %></p>
 </div>
 <div>
+  <%= link_to "Edit #{@posting.title}", :edit_posting %>
+<div>
   <%= link_to "Back to Index", :postings %>
 </div>
