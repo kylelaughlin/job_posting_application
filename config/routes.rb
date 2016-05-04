@@ -1,13 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'postings/new'
-
-  get 'postings/index'
-
-  get 'postings/show'
-
-  get 'postings/edit'
-
   resources :postings
 
 

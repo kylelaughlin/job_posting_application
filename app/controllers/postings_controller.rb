@@ -1,5 +1,6 @@
 class PostingsController < ApplicationController
   def new
+    @posting.new
   end
 
   def index
