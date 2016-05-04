@@ -1,12 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  company: MyString
-  title: MyString
-  description: MyText
-  salary: 1
-  location: MyString
+  company: "Allstate"
+  title: "Peon"
+  description: "Lengthy and not meaninful"
+  salary: 100000
+  location: "Chicago"
 
+  
 two:
   company: MyString
   title: MyString
