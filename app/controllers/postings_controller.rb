@@ -14,7 +14,11 @@ class PostingsController < ApplicationController
   end
 
   def index
-    @postings = Posting.all.order(created_at: :desc)
+    if params[:search]
+      @postings = Posting.search(params[:search]).order("created_at DESC")
+    else
+      @postings = Posting.all.order('created_at DESC')
+    end
   end
 
   def show

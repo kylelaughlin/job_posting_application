@@ -1,11 +1,22 @@
-<h1>Job Postings</h1>
-
-<% @postings.each do |posting| %>
-  <div>
-    <p><%= link_to posting.title, posting_path(posting.id)%></p>
-    <p><%=posting.company%></p>
-    <p><%=posting.location%></p>
+<div class="container">
+  <div class="header-wrapper">
+    <h1 class="header">Job-ify YoSelf</h1>
+    <h5 class="sub-header">The best employment site eva</h5>
   </div>
-<% end %>
+  <div>
+    <%= form_tag(postings_path, :method => "get", id: "search-form") do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search Companies" %>
+      <%= submit_tag "Search", :name => nil %>
+    <% end %>
+  </div>
 
-<%= link_to "Add a new Posting", :new_posting %>
+  <% @postings.each do |posting| %>
+    <div>
+      <p><%= link_to posting.title, posting_path(posting.id)%></p>
+      <p><%=posting.company%></p>
+      <p><%=posting.location%></p>
+    </div>
+  <% end %>
+
+  <%= link_to "Add a new Posting", :new_posting %>
+</div>

@@ -3,4 +3,9 @@ class Posting < ActiveRecord::Base
   validates :title, presence: true
   validates :description, presence: true
   validates :location, presence: true
+
+
+  def self.search(query)
+    where("company like ?", "%#{query}%")
+  end
 end
