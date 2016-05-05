@@ -8,14 +8,14 @@
 </head>
 <body>
 <% if flash[:notice] %>
-    <div>
-      <p><%= flash[:notice]%></p>
+    <div id="flash" class="flash green-flash">
+      <p class="flash-text"><%= flash[:notice]%></p>
     </div>
 <% end %>
 
 <% if flash[:alert] %>
-    <div>
-      <p><%= flash[:alert]%></p>
+    <div id="flash" class="flash red-flash">
+      <p class="flash-text"><%= flash[:alert]%></p>
     </div>
 <% end %>
 

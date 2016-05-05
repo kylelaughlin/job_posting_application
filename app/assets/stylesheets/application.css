@@ -23,3 +23,24 @@ body {
   margin: auto;
   padding: 0;
 }
+
+.flash{
+  color: #FFF;
+  padding: 5px 20px 0px 20px;
+  position: absolute;
+  top: 0;
+  right: 15%;
+}
+
+.green-flash {
+  background-color: green;
+}
+
+.red-flash {
+  background-color: red;
+}
+
+.flash-text {
+  padding: 0;
+  margin: 0;
+}
