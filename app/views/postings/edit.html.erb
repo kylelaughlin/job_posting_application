@@ -1,5 +1,10 @@
-<h1>Edit <%=@posting.title%></h1>
+<div class="container">
+  <%= render "layouts/header" %>
+  <div class="text-center">
+    <h1>Edit <%=@posting.title%></h1>
 
-<%= render "layouts/form" %>
+    <%= render "layouts/form" %>
 
-<%= link_to "Delete This Posting", posting_path(@posting), method: :delete %>
+    <%= link_to "Delete This Posting", posting_path(@posting), method: :delete %>
+  </div>
+</div>

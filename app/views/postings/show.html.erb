@@ -1,12 +1,19 @@
-<h1><%= @posting.title%></h1>
-<div>
-  <p>Company: <%= @posting.company %></p>
-  <p>Salary: <%= @posting.salary %></p>
-  <p>Location: <%= @posting.location %></p>
-  <p>Description: <%= @posting.description %></p>
-</div>
-<div>
-  <%= link_to "Edit #{@posting.title}", :edit_posting %>
-<div>
-  <%= link_to "Back to Index", :postings %>
+<div class="container">
+  <%= render "layouts/header" %>
+  <h1><%= @posting.title%></h1>
+  <div>
+    <p>Company: <%= @posting.company %></p>
+    <p>Location: <%= @posting.location %></p>
+    <p>Description: <%= @posting.description %></p>
+    <% if !@posting.salary.blank? %>
+      <p>Salary: <%= number_to_currency(@posting.salary, precision: 0) %></p>
+    <% else %>
+      <p> No Salary Information Listed</p>
+    <% end %>
+  </div>
+  <div>
+    <%= link_to "Edit #{@posting.title}", :edit_posting %>
+  <div>
+    <%= link_to "Back to Index", :postings %>
+  </div>
 </div>
