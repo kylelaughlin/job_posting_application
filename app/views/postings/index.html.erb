@@ -9,6 +9,7 @@
           <%= text_field_tag :search, params[:search], placeholder: "Search Companies" %>
           <%= submit_tag "Search", :name => nil %>
         <% end %>
+        <%= link_to "Clear Search Results", :postings %>
       </div>
     </div>
     <div class="col-md-6">
